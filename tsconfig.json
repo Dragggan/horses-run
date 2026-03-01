@@ -1,18 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES2022", // Modern JS, required for private fields
+    "target": "ES2022",
     "module": "node16",
-    "moduleResolution": "Node16", // Needed for Vite ESM
+    "moduleResolution": "Node16",
     "esModuleInterop": true,
-    "allowJs": true,
     "strict": true,
-    "skipLibCheck": true, // Skip node_modules TS errors
+    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".", // Needed for path aliases
-    "paths": {
-      "@/*": ["src/*"] // Resolves @/store, @/types, etc.
-    },
-    "types": ["vite/client"] // Recognizes .vue files in TS
+    "baseUrl": ".",
+    "paths": { "@/*": ["src/*"] },
+    "types": ["vite/client"],
+    "noEmit": true
   },
   "include": ["src", "vite.config.ts", "env.d.ts"],
   "exclude": ["node_modules", "dist"]

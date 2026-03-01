@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import { Horse } from "@/types";
+
   defineProps<{
     horse: Horse;
   }>();
