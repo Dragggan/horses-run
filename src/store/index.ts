@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
-import horses, { HorsesState } from './horsesStore'
-import race, { RaceState } from './Race'
+import horses, { HorsesState } from './horsesStore.ts'
+import race, { RaceState } from './Race.ts'
 
 export interface RootState {
   horses: HorsesState

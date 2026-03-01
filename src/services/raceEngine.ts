@@ -1,4 +1,4 @@
-import { Round, RoundResult } from '@/types'
+import { Round, RoundResult } from '@/types/index.ts'
 
 export function runRaceRound(round: Round): Promise<RoundResult> {
     return new Promise(resolve => {
