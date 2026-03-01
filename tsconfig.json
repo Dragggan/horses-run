@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
-    "module": "es2022"
-  }
+    "target": "ES2022",               // Modern JS, required for private fields
+    "module": "ESNext",               // Needed for Vite ESM
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "strict": true,
+    "skipLibCheck": true,             // Skip node_modules TS errors
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",                    // Needed for path aliases
+    "paths": {
+      "@/*": ["src/*"]                 // Resolves @/store, @/types, etc.
+    },
+    "types": ["vite/client"]           // Recognizes .vue files in TS
+  },
+  "include": ["src", "vite.config.ts", "env.d.ts"],
+  "exclude": ["node_modules", "dist"]
 }
