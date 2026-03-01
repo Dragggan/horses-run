@@ -57,12 +57,11 @@ h1 {
   transition: border-color 0.25s;
   color: black;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+.custom--button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  color: rgb(194, 193, 193);
 }
 
 .card {

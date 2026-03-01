@@ -3,7 +3,7 @@ import { Round, RoundResult } from '@/types'
 import { runRaceRound } from '../services/raceEngine'
 import { RootState } from '@/state'
 
-const ROUND_DISTANCES = [1200, 1400, 1600, 1800, 2000, 2200]
+const ROUND_DISTANCES = [1200, 1400]
 
 export interface RaceState {
     schedule: Round[]
@@ -19,7 +19,7 @@ const race: Module<RaceState, RootState> = {
         schedule: [],
         results: [],
         activeRound: null,
-        isRunning: false
+        isRunning: false,
     }),
 
     mutations: {
@@ -34,7 +34,7 @@ const race: Module<RaceState, RootState> = {
         },
         ADD_RESULT(state, result: RoundResult) {
             state.results.push(result)
-            console.log('%c  -> ', 'color:red;',  state.results);
+            console.log('%c  -> ', 'color:red;', state.results);
         },
         RESET(state) {
             state.schedule = []
@@ -65,9 +65,7 @@ const race: Module<RaceState, RootState> = {
 
             for (const round of state.schedule) {
                 commit('SET_ACTIVE_ROUND', round)
-                    console.log('%c  round-> ', 'color:red;', round);
                 const result = await runRaceRound(round)
-                console.log('%c  result-> ', 'color:red;', result);
                 commit('ADD_RESULT', result)
 
                 await delay(1000)

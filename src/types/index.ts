@@ -1,8 +1,8 @@
 export interface Horse {
-  id: number
-  name: string
-  color: string
-  condition: number
+    id: number
+    name: string
+    color: string
+    condition: number
 }
 
 export interface Round {
@@ -16,6 +16,7 @@ export interface HorseResult {
     name: string
     color: string
     time: number
+    speed:number
 }
 
 export interface RoundResult {

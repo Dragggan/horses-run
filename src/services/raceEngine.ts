@@ -9,7 +9,6 @@ export function runRaceRound(round: Round): Promise<RoundResult> {
                 horse.condition * (0.6 + Math.random() * 0.8)
 
             const time = round.distance / performance
-
             return {
                 horseId: horse.id,
                 name: horse.name,

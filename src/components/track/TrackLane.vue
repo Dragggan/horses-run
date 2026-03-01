@@ -14,21 +14,32 @@
       {{ laneNumber }}
     </div>
 
-    <div class="flex-1 relative">
+    <div class="flex-1">
       <div
-        class="flex text-[28px] absolute -top-2.5e horse"
+        class="flex text-[28px] -top-2.5e horse relative"
+        :style="{
+          animationDuration: horse.speed * 3 + 's',
+        }"
         :class="{ running: isRunning }"
       >
-        <span class="text-[black] text-[10px] font-[bold]">{{ horse.name }}</span>
-        <img src="../../assets/horse.svg" width="50" height="50" class="mt-12" />
+        <span class="text-[black] text-[10px] font-[bold] mt-10 pr-2">{{
+          horse.name
+        }}</span>
+        <img src="../../assets/horse.svg" width="50" height="50" class="mt-6" />
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+  .horse {
+    left: 0;
+  }
+
   .horse.running {
-    animation: run 3s linear forwards;
+    animation-name: run;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
   }
 
   @keyframes run {
@@ -37,7 +48,7 @@
     }
 
     to {
-      left: 87%;
+      left: 85%;
     }
   }
 </style>

@@ -36,7 +36,9 @@
         {{ isRunning ? "RUNNING..." : "START" }}
       </button>
 
-      <button class="custom--button" @click="handleReset">RESET</button>
+      <button class="custom--button" @click="handleReset" :disabled="!canStart">
+        RESET
+      </button>
     </div>
   </div>
 </template>

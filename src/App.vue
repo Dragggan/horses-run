@@ -7,7 +7,7 @@
     <div class="flex flex-1">
       <HorsesList />
       <RaceTrack />
-      <div class="flex min-w-80 justify-between" :style="{ border: 'solid white 1px' }">
+      <div class="flex min-w-80 justify-between">
         <RaceProgram />
         <RaceResults />
       </div>

@@ -6,6 +6,8 @@ export function generateRandomHorses(total = 20) {
         name: `Horse ${i + 1}`,
         color: colors[i],
         condition: randomBetween(1, 100),
+        speed:    randomBetween(1, 5)
+
     }))
 }
 
