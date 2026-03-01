@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022", // Modern JS, required for private fields
-    "module": "ESNext",
+    "module": "node16",
     "moduleResolution": "Node16", // Needed for Vite ESM
     "esModuleInterop": true,
     "allowJs": true,
