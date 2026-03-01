@@ -39,7 +39,6 @@ const race: Module<RaceState, RootState> = {
         },
         ADD_RESULT(state, result: RoundResult) {
             state.results.push(result)
-            console.log('%c  -> ', 'color:red;', state.results);
             state.isRunning = false
         },
         RESET(state) {
@@ -65,7 +64,6 @@ const race: Module<RaceState, RootState> = {
 
         async startRace({ state, commit }) {
 
-            console.log('%c  state.schedule.length-> ', 'color:red;', state.schedule.length);
             if (!state.schedule.length) return
             commit("RACE_IN_PROGRESS",true)
 
@@ -95,9 +93,7 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 function delay(ms: number): Promise<void> {
-    console.log('%c  ms-> ', 'color:red;', ms);
     return new Promise(resolve => {
-        console.log('%c  res-> ', 'color:red;', resolve);
         setTimeout(resolve, ms)
     })
 }

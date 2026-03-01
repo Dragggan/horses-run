@@ -18,7 +18,6 @@ export function runRaceRound(round: Round): Promise<RoundResult> {
         })
 
         const sorted = results.sort((a, b) => a.time - b.time)
-        console.log('%c  sorted-> ', 'color:red;', sorted);
         setTimeout(() => {
             resolve({
                 round: round.round,
