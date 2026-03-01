@@ -1,6 +1,6 @@
 import { Module } from 'vuex'
-import { Round, RoundResult } from '@/types/index.ts'
-import { runRaceRound } from '../services/raceEngine.ts'
+import { Round, RoundResult } from '@/types/index.js'
+import { runRaceRound } from '../services/raceEngine.js'
 import { RootState } from '@/state'
 
 const ROUND_DISTANCES = [1200, 1400, 1600, 1800, 2000, 2200]

@@ -1,7 +1,7 @@
 import { createStore } from 'vuex'
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-import race from '@/store/race'
-import { runRaceRound } from '@/services/raceEngine'
+import race from '@/store/Race.js'
+import { runRaceRound } from '@/services/raceEngine.js'
 
 vi.mock('@/services/raceEngine', () => ({
     runRaceRound: vi.fn()

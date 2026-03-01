@@ -1,7 +1,7 @@
 // src/env.d.ts
 /// <reference types="vite/client" />
 
-declare module '*.vue' {
+declare module '' {
   import { DefineComponent } from 'vue'
   const component: DefineComponent<{}, {}, any>
   export default component

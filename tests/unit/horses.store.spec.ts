@@ -1,7 +1,7 @@
 import { createStore } from 'vuex'
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-import horses from '@/store/horsesStore'
-import { generateRandomHorses } from '@/utils/random'
+import horses from '@/store/horsesStore.js'
+import { generateRandomHorses } from '@/utils/random.js'
 
 vi.mock('@/utils/random', () => ({
     generateRandomHorses: vi.fn()

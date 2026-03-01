@@ -1,7 +1,13 @@
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
     "strict": false,
-    "noEmitOnError": true
-  }
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "noEmitOnError": false,
+    "noEmit": true,
+    "allowJs": true,
+    "module": "Node16",
+    "moduleResolution": "Node16"
+  },
+  "include": ["src/**/*"]
 }

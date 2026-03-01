@@ -1,6 +1,6 @@
 import { Module } from 'vuex'
-import { Horse } from '@/types/index.ts'
-import { generateRandomHorses } from '@/utils/random.ts'
+import { Horse } from '@/types/index.js'
+import { generateRandomHorses } from '@/utils/random.js'
 
 export interface HorsesState {
     all: Horse[]
