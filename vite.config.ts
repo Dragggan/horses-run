@@ -13,19 +13,5 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src')
     },
-  },
-  test: {
-    environment: 'jsdom',
-    globals: true,
-    coverage: {
-      provider: 'v8',
-      reporter: ['text', 'html'],
-      reportsDirectory: './coverage',
-      exclude: [
-        'node_modules/',
-        'tests/',
-        'dist/'
-      ]
-    }
   }
 })
