@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "moduleResolution": "bundler",
-    /* OR use "node16" / "nodenext" if you are not using a bundler like Vite */
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
