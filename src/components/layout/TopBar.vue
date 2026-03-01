@@ -5,6 +5,7 @@
 
   const store = useStore<RootState>();
   const isRunning = computed(() => store.state.race.isRunning);
+  const raceInProgress = computed(() => store.state.race.raceInProgress);
   const hasSchedule = computed(() => store.state.race.schedule.length > 0);
   const canStart = computed(() => hasSchedule.value && !isRunning.value);
 
@@ -28,15 +29,27 @@
   >
     <div class="text-2xl text-center text-black font-bold-500">Horse Racing</div>
     <div class="flex gap-x-3">
-      <button class="custom--button" @click="handleGenerate" :disabled="isRunning">
+      <button
+        class="custom--button"
+        @click="handleGenerate"
+        :disabled="isRunning || raceInProgress"
+      >
         GENERATE PROGRAM
       </button>
 
-      <button class="custom--button" @click="handleStart" :disabled="!canStart">
+      <button
+        class="custom--button"
+        @click="handleStart"
+        :disabled="!canStart || raceInProgress"
+      >
         {{ isRunning ? "RUNNING..." : "START" }}
       </button>
 
-      <button class="custom--button" @click="handleReset" :disabled="!canStart">
+      <button
+        class="custom--button"
+        @click="handleReset"
+        :disabled="!canStart || raceInProgress"
+      >
         RESET
       </button>
     </div>
