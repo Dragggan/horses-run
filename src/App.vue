@@ -1,9 +1,26 @@
-<script setup lang="ts"></script>
-
 <template>
-  <h1 class="test123">Hello world!</h1>
+  <div class="flex flex-col h-screen">
+    <div class="top">
+      <TopBar />
+    </div>
+
+    <div class="flex flex-1">
+      <HorsesList />
+      <RaceTrack />
+      <div class="flex min-w-80 justify-between" :style="{ border: 'solid white 1px' }">
+        <RaceProgram />
+        <RaceResults />
+      </div>
+    </div>
+  </div>
 </template>
 
-<style lang="css" scoped>
-  @reference "./style.css";
-</style>
+<script setup lang="ts">
+  import TopBar from "./components/layout/TopBar.vue";
+  import HorsesList from "./components/horses/HorsesList.vue";
+  import RaceTrack from "./components/track/RaceTrack.vue";
+  import RaceResults from "./components/results/RaceResults.vue";
+  import RaceProgram from "./components/program/RaceProgram.vue";
+</script>
+
+<style></style>
