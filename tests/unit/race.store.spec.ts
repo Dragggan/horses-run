@@ -43,7 +43,6 @@ describe('Race Store', () => {
     })
 
     it('runs through schedule and resets state', async () => {
-        // mock result returned from race engine
         ; (runRaceRound as any).mockResolvedValue({
             round: 1,
             winner: { id: 1, name: 'A', speed: 2 }
@@ -62,7 +61,6 @@ describe('Race Store', () => {
 
         const dispatchPromise = store.dispatch('race/startRace')
 
-        // fast-forward delay(500)
         await vi.runAllTimersAsync()
 
         await dispatchPromise
