@@ -25,6 +25,6 @@ export function runRaceRound(round: Round): Promise<RoundResult> {
                 distance: round.distance,
                 standings: sorted
             })
-        }, 3000)
+        }, 5000)
     })
 }
